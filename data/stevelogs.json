@@ -10,6 +10,17 @@
       "balance": 0,
       "isSuspended": false,
       "createdAt": 1789165840405
+    },
+    {
+      "id": "usr_1789165995958_f3cj9",
+      "name": "Test User",
+      "email": "test@example.com",
+      "phone": "+1234567890",
+      "passwordHash": "password123",
+      "role": "customer",
+      "balance": 0,
+      "isSuspended": false,
+      "createdAt": 1789165995958
     }
   ],
   "orders": [],
@@ -70,6 +81,15 @@
       "type": "SYSTEM",
       "read": false,
       "createdAt": 1789165840405
+    },
+    {
+      "id": "notif_1789165995958",
+      "userId": "usr_1789165995958_f3cj9",
+      "title": "Welcome to Marvel Nums!",
+      "message": "Your account is ready. Fund your wallet to start ordering high-speed virtual numbers.",
+      "type": "SYSTEM",
+      "read": false,
+      "createdAt": 1789165995958
     }
   ],
   "adminSettings": {

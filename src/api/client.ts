@@ -31,9 +31,28 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
     headers
   });
 
-  const data = await response.json();
+  const contentType = response.headers.get('content-type') || '';
+  const responseText = await response.text();
+  let data: unknown = null;
+
+  if (responseText && contentType.includes('application/json')) {
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      data = null;
+    }
+  }
+
   if (!response.ok) {
-    throw new Error(data.error || data.message || 'Request failed');
+    const errorData = data as { error?: string; message?: string } | null;
+    const fallback = response.status === 404
+      ? 'The API endpoint was not found. Please redeploy the latest version.'
+      : `Request failed (${response.status})`;
+    throw new Error(errorData?.error || errorData?.message || fallback);
+  }
+
+  if (!data) {
+    throw new Error('The server returned an invalid response. Please try again.');
   }
 
   return data as T;
