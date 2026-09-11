@@ -1,5 +1,17 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "usr_1789165840405_v9fff",
+      "name": "Marvelous Godfirst",
+      "email": "marvelousgodfirst09@gmail.com",
+      "phone": "Minnie Irving",
+      "passwordHash": "thyyyy",
+      "role": "customer",
+      "balance": 0,
+      "isSuspended": false,
+      "createdAt": 1789165840405
+    }
+  ],
   "orders": [],
   "fundingRequests": [],
   "transactions": [],
@@ -49,7 +61,17 @@
       "sortOrder": 4
     }
   ],
-  "notifications": [],
+  "notifications": [
+    {
+      "id": "notif_1789165840405",
+      "userId": "usr_1789165840405_v9fff",
+      "title": "Welcome to Marvel Nums!",
+      "message": "Your account is ready. Fund your wallet to start ordering high-speed virtual numbers.",
+      "type": "SYSTEM",
+      "read": false,
+      "createdAt": 1789165840405
+    }
+  ],
   "adminSettings": {
     "adminPassword": "292009",
     "benotpApiKey": "",
