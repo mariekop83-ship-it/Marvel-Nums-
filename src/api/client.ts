@@ -45,9 +45,10 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
 
   if (!response.ok) {
     const errorData = data as { error?: string; message?: string } | null;
+    const textFallback = responseText.trim().replace(/<[^>]+>/g, '').slice(0, 240);
     const fallback = response.status === 404
-      ? 'The API endpoint was not found. Please redeploy the latest version.'
-      : `Request failed (${response.status})`;
+      ? 'The authentication service is unavailable. Please try again after the latest deployment finishes.'
+      : textFallback || `Request failed (${response.status})`;
     throw new Error(errorData?.error || errorData?.message || fallback);
   }
 
