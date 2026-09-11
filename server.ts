@@ -990,4 +990,9 @@ async function start() {
   });
 }
 
-start();
+// Export the Express app so Vercel can run the API routes as a serverless function.
+export { app };
+
+if (!process.env.VERCEL) {
+  start();
+}
