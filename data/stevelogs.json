@@ -1,0 +1,74 @@
+{
+  "users": [],
+  "orders": [],
+  "fundingRequests": [],
+  "transactions": [],
+  "paymentMethods": [
+    {
+      "id": "pm-opay",
+      "title": "OPay Instant Transfer",
+      "type": "BANK",
+      "bankName": "OPay Bank",
+      "accountName": "SteveLogs Virtual Services",
+      "accountNumber": "8012345678",
+      "instructions": "Transfer exact amount. Upload the transaction receipt or screenshot below for instant verification.",
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "pm-palmpay",
+      "title": "PalmPay Instant Transfer",
+      "type": "BANK",
+      "bankName": "PalmPay",
+      "accountName": "SteveLogs Virtual Services",
+      "accountNumber": "9087654321",
+      "instructions": "Send money to our official PalmPay merchant account and submit receipt.",
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "pm-kuda",
+      "title": "Kuda Microfinance Bank",
+      "type": "BANK",
+      "bankName": "Kuda Bank",
+      "accountName": "SteveLogs Technologies",
+      "accountNumber": "2034928174",
+      "instructions": "Zero transfer fee with Kuda. Upload your payment confirmation receipt.",
+      "isActive": true,
+      "sortOrder": 3
+    },
+    {
+      "id": "pm-usdt",
+      "title": "USDT (TRC-20 / BEP-20)",
+      "type": "CRYPTO",
+      "bankName": "Crypto Wallet",
+      "accountName": "SteveLogs USDT Deposit",
+      "accountNumber": "TXQ8jK7p...9zL1mN34TRC20",
+      "instructions": "Send USDT (TRC-20). Upload tx hash screenshot. Rate will be credited automatically at ₦1,550/USDT.",
+      "isActive": true,
+      "sortOrder": 4
+    }
+  ],
+  "notifications": [],
+  "adminSettings": {
+    "adminPassword": "292009",
+    "benotpApiKey": "",
+    "currencySymbol": "₦",
+    "currencyRateToNgn": 1,
+    "markupType": "FIXED",
+    "markupValue": 50,
+    "server1Enabled": true,
+    "server2Enabled": true,
+    "server3Enabled": true,
+    "telegramBotToken": "",
+    "telegramChatId": "",
+    "telegramEnabled": false,
+    "whatsappNumber": "+2348000000000",
+    "whatsappSupportName": "SteveLogs Support Desk",
+    "whatsappDefaultMessage": "Hello SteveLogs Support, I need assistance with my account.",
+    "lastSyncTime": 0,
+    "lastSyncStatus": "NEVER",
+    "lastProviderError": ""
+  },
+  "diagnosticsLogs": []
+}
