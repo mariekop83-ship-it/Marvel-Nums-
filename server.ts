@@ -964,6 +964,12 @@ app.post('/api/admin/diagnostics/sync-now', requireAdmin, async (req, res) => {
   });
 });
 
+// Keep API failures JSON even when a deployment sends an unknown API path to
+// the Express app instead of the Vercel catch-all function.
+app.use('/api', (req, res) => {
+  res.status(404).json({ error: 'API endpoint not found.' });
+});
+
 // ----------------------------------------------------
 // Vite Dev & Production Static Serving
 // ----------------------------------------------------
